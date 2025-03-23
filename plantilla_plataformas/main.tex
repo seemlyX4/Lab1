@@ -1,0 +1,110 @@
+% Tipo de documento y otras especificaciones
+\documentclass[12pt,letterpaper]{article}
+% Configuracion
+\input{Configuration/project_configuration}
+
+\input{Configuration/page_setup}
+
+\begin{document}
+
+\input{Configuration/title}
+
+\tableofcontents
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCCION
+%----------------------------------------------------------------------------------------
+
+\section{Introducción}
+
+En esta sección se espera una introducción de las tareas realizadas en el laboratorio/proyecto. Al igual que el enlace del repositorio de Git donde se encuentra la implementación.
+
+Ejemplo de \href{https://www.google.com}{link}.
+
+%----------------------------------------------------------------------------------------
+%	IMPLEMENTACION
+%----------------------------------------------------------------------------------------
+
+\section{Implementación}
+
+En esta sección se debe incluir una explicación detallada de como abordaron los ejercicios del laboratorio/proyecto. Incluir los pasos tomados, algoritmos o técnicas utilizadas, diseños, fragmentos de código o pseudocódigo, entre otros. La idea es que el estudiante demuestre la comprensión del problema y de su solución.
+
+\subsection{Figura}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.1]{Images/hello_world_py.jpeg}
+    \caption{Ejemplo de imagen \cite{knuth:1984}.}
+    \label{fig:ejemplo_imagen}
+\end{figure}
+
+Ejemplo de referencia de figuras \ref{fig:ejemplo_imagen}.
+
+\subsection{Tabla}
+
+\begin{table}[H]
+\caption{Ejemplo tabla} \label{tab:ejemplo_tabla}
+    \begin{center}
+    	\begin{tabular}{@{}*{4}{c}@{}}
+            \toprule
+            $C_0$ & $C_1$\\
+            \midrule
+            1 & 2\\
+        	3 & 4\\
+        	\bottomrule
+        \end{tabular}
+    \end{center}
+\end{table}
+
+Ejemplo de referencia de tablas \ref{tab:ejemplo_tabla}.
+
+\subsection{Ecuaciones}
+
+\begin{equation} \label{eq:formula_triangulo}
+    T_n = \frac{n(n+1)}{2}
+\end{equation}
+
+Ejemplo de referencia de ecuaciones \eqref{eq:formula_triangulo}.
+
+\subsection{Código}
+
+\begin{lstlisting}[style=mystyle, caption={Ejemplo de codigo}, label=lst:ejemplo_codigo]
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+result = factorial(5)
+print("Factorial of 5 is:", result)
+\end{lstlisting}
+
+%----------------------------------------------------------------------------------------
+%	RESULTADOS
+%----------------------------------------------------------------------------------------
+
+\section{Resultados}
+
+En la sección de Resultados se debe incluir las pruebas realizadas sobre su código para corroborar su funcionalidad.
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSIONES Y RECOMENDACIONES
+%----------------------------------------------------------------------------------------
+
+\section{Conclusiones y recomendaciones}
+
+Finalmente, en esta sección resumir lo aprendido en el laboratorio/proyecto. Además, incluir los problemas que tuvo, como los resolvió y recomendaciones para el futuro.
+
+\newpage
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+\end{document}

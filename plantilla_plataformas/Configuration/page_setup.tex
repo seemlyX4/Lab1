@@ -1,0 +1,15 @@
+% Contenido de los encabezados y pies de pagina
+\pagestyle{fancy}
+\lhead{IE0117: Programación Bajo Plataformas Abiertas}
+\rhead{Reporte Laboratorio \#}
+\lfoot{Escuela de Ingeniería Eléctrica}
+\cfoot{\thepage\ de \pageref{LastPage}}
+\rfoot{Universidad de Costa Rica}
+
+\let\OLDthebibliography=\thebibliography
+\def\thebibliography#1{\OLDthebibliography{#1}%
+\addcontentsline{toc}{section}{\refname}}
+
+\makeatletter
+\renewcommand\@biblabel[1]{#1. \ }
+\makeatother
